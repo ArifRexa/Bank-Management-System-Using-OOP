@@ -12,10 +12,12 @@ class Account:
         self.bank.update_total_balance(amount)
 
     def withdraw(self, amount):
-        if self.balance >= amount:
+        if self.balance > amount:
             self.balance -= amount
             self.transaction_history.append(f"Withdrew {amount}")
             self.bank.withdraw_total_balance(amount)
+        elif self.balance == amount:
+            print("The bank is bankrupt")
         else:
             print("Insufficient balance. You can't withdraw more than your current balance.")
 

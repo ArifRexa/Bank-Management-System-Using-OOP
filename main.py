@@ -24,7 +24,7 @@ def main():
 
 
 # ======================== Checking the total balance of Users balance after Transfer, taking loan and deposit ========================
-    print("\n====================== Checking the total balance of Users balance after Transfer, taking loan and deposit ======================\n")
+    print("\n==================== Checking the total balance of Users balance after Transfer, taking loan and deposit ====================\n")
     user1.transfer(user2, 300)
     print(f"{user1.name} balance after tranfer 300: ",user1.check_balance())
     user1.take_loan(bank)
@@ -32,6 +32,8 @@ def main():
     user1.deposit(500)
     print(f"{user1.name} balance after deposit 500: ",user1.check_balance())
     print(f"{user2.name} balance: ",user2.check_balance())  
+    user1.withdraw(1700)
+    print(f"{user1.name} balance: ",user1.check_balance())  
 
 # ========================== Checking the total balance of Bank and Loan amount ===========================
     print("\n========================== Checking the total balance of Bank and Loan amount ===========================\n")
@@ -42,6 +44,6 @@ def main():
     user1.view_transaction_history()  
     user2.view_transaction_history()  
 
-
+# ============================= Main Function =============================
 if __name__ == "__main__":
     main()
