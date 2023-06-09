@@ -38,7 +38,7 @@ def main():
 # ========================== Checking the total balance of Bank and Loan amount ===========================
     print("\n========================== Checking the total balance of Bank and Loan amount ===========================\n")
     print("The Total balance of bank: ", bank.get_total_balance()) 
-    print(f"Total loan given: ",bank.get_total_loan_amount())  
+    print(f"Total loan given: ", bank.get_total_loan_amount())  
 
 # ==================================== Checking the transaction history ====================================
     user1.view_transaction_history()  
