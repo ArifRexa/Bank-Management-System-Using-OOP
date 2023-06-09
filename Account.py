@@ -3,18 +3,20 @@ class Account:
         self.name = name
         self.balance = initial_balance
         self.loan_amount = 0
+        self.bank = None
         self.transaction_history = []
 
     def deposit(self, amount):
         self.balance += amount
         self.transaction_history.append(f"Deposited {amount}")
+        self.bank.updateTotalBalance(amount)
 
     def withdraw(self, amount):
         if self.balance >= amount:
             self.balance -= amount
             self.transaction_history.append(f"Withdrew {amount}")
         else:
-            print("Insufficient balance.")
+            print("Insufficient balance. You can't withdraw more than your current balance.")
 
     def check_balance(self):
         return self.balance
@@ -26,7 +28,7 @@ class Account:
             self.transaction_history.append(f"Transferred {amount} to {recipient_account.name}")
             recipient_account.transaction_history.append(f"Received {amount} from {self.name}")
         else:
-            print("Insufficient balance.")
+            print("Insufficient balance. You can't transfer more than your current balance.")
 
     def take_loan(self, bank):
         if bank.loan_feature_enabled:
@@ -41,5 +43,7 @@ class Account:
             print("Loan feature is currently disabled.")
 
     def view_transaction_history(self):
+        print("\n=================== Transection History ===================\n")
+        print(f"Transection History of {self.name}")
         print(*self.transaction_history, sep="\n")
 

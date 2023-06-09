@@ -8,9 +8,13 @@ class Bank:
 
     def create_account(self, name, initial_deposit):
         account = Account(name, initial_deposit)
+        account.bank = self
         self.accounts.append(account)
         self.total_balance += initial_deposit
         return account
+    
+    def updateTotalBalance(self, amount):
+        self.total_balance += amount
 
     def get_account_by_name(self, name):
         for account in self.accounts:
