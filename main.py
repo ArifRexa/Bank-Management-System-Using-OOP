@@ -22,6 +22,7 @@ def main():
     user2.withdraw(2000)
 
 
+
 # ======================== Checking the total balance of Users balance after Transfer, taking loan and deposit ========================
     print("\n====================== Checking the total balance of Users balance after Transfer, taking loan and deposit ======================\n")
     user1.transfer(user2, 300)

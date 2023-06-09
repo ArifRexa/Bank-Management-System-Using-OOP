@@ -13,8 +13,11 @@ class Bank:
         self.total_balance += initial_deposit
         return account
     
-    def updateTotalBalance(self, amount):
+    def update_total_balance(self, amount):
         self.total_balance += amount
+
+    def withdraw_total_balance(self, amount):
+        self.total_balance -= amount
 
     def get_account_by_name(self, name):
         for account in self.accounts:

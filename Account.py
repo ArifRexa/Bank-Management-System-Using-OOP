@@ -9,12 +9,13 @@ class Account:
     def deposit(self, amount):
         self.balance += amount
         self.transaction_history.append(f"Deposited {amount}")
-        self.bank.updateTotalBalance(amount)
+        self.bank.update_total_balance(amount)
 
     def withdraw(self, amount):
         if self.balance >= amount:
             self.balance -= amount
             self.transaction_history.append(f"Withdrew {amount}")
+            self.bank.withdraw_total_balance(amount)
         else:
             print("Insufficient balance. You can't withdraw more than your current balance.")
 
