@@ -12,10 +12,11 @@ class Bank:
         self.accounts.append(account)
         self.total_balance += initial_deposit
         return account
-    
+    # ====================== for updating bank balance while user deposite ======================
     def update_total_balance(self, amount):
         self.total_balance += amount
 
+    # ====================== for updating bank balance while user withdrawing ======================
     def withdraw_total_balance(self, amount):
         self.total_balance -= amount
 
