@@ -28,7 +28,7 @@ def main():
     user1.transfer(user2, 300)
     print(f"{user1.name} balance after tranfer 300: ",user1.check_balance())
     user1.take_loan(bank)
-    print(f"{user1.name} take loan: ", user1.loan_amount)
+    print(f"{user1.name} take loan: ", user1.loanAamount())
     user1.deposit(500)
     print(f"{user1.name} balance after deposit 500: ",user1.check_balance())
     print(f"{user2.name} balance: ",user2.check_balance())  
