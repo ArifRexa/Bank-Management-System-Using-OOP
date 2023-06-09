@@ -19,12 +19,6 @@ class Bank:
     def withdraw_total_balance(self, amount):
         self.total_balance -= amount
 
-    def get_account_by_name(self, name):
-        for account in self.accounts:
-            if account.name == name:
-                return account
-        return None
-
     def get_total_balance(self):
         return self.total_balance
 
